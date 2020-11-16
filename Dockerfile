@@ -1,10 +1,10 @@
-FROM node:lts-alpine
+FROM docker-alpine-python-node
 
 # pass N8N_VERSION Argument while building or use default
 ARG N8N_VERSION=0.65.0
 
 # Update everything and install needed dependencies
-RUN apk add --update graphicsmagick tzdata
+RUN apk add --update graphicsmagick tzdata &&&
 
 # Set a custom user to not have n8n run as root
 USER root
